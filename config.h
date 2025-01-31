@@ -29,7 +29,7 @@ char *vtiden = "\033[?6c";
 static float cwscale = 1.0;
 static float chscale = 1.0;
 
-int scrollback = 5000;
+int scrollback = 2000;
 
 /*
  * word delimiter string
@@ -203,6 +203,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+  { ShiftMask,            XK_K,           kscrollup,      {.i = -1} },
+  { ShiftMask,            XK_j,           kscrolldown,    {.i = -1} },
 };
 
 /*
